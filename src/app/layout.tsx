@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`antialiased`}
+        className="bg-imgee bg-cover bg-center min-h-screen"
       >
         {children}
       </body>

@@ -19,8 +19,81 @@
   }
 }
 
+@layer utilities {
+  .text-shadow-custom {
+    text-shadow: 0 0 25px purple;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-imgee {
+  background-image: url('/darkMode.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+@layer utilities {
+  .text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+  }
+
+  .anima::before {
+    content: "";
+    color: rgb(233, 26, 233);
+    text-shadow: 0 0 25px white;
+    animation: words 15s infinite linear;
+  }
+
+  @keyframes words {
+    0%,
+    20% {
+      content: "Developer Web";
+    }
+    21%,
+    40% {
+      content: "Web Designer";
+    }
+    41%,
+    60% {
+      content: "Backend Developer";
+    }
+    81%,
+    100% {
+      content: "Developer Software FullStack";
+    }
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 8px);
+    }
+  }
 }
